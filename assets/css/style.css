@@ -14,13 +14,16 @@
 }
 
 *{ box-sizing:border-box; }
-html{ scroll-behavior:smooth;   overflow-x: hidden;}
+html{ scroll-behavior:smooth; overflow-x: hidden; width: 100%; }
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:#222;
   background:var(--white);
   line-height:1.5;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 a{ color:inherit; text-decoration:none; }
 .container-max{
@@ -377,6 +380,9 @@ section{ padding: 4.25rem 0; }
   background: var(--white);
   padding: 1rem 1.1rem;
   box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 .projectCard h3{ margin:0 0 .4rem; font-size: 1.15rem; }
 .meta{ display:flex; gap:.75rem; flex-wrap:wrap; color:#444; font-size:.95rem; margin-bottom:.55rem;}
@@ -1165,12 +1171,74 @@ footer{
   }
 }
 
+/* Project marquee styles */
+.projMedia{
+  width: 100%;
+  overflow: hidden;
+  margin: 0.75rem 0;
+  border-radius: 12px;
+  background: var(--g100);
+  border: 1px solid var(--g200);
+}
+
+.projMarquee{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.projTrack{
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+  padding: 0.5rem;
+}
+
+.projTrack:hover{
+  animation-play-state: paused;
+}
+
+.projImg{
+  height: 180px;
+  width: auto;
+  max-width: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid var(--g200);
+}
+
+@keyframes marqueeScroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
 @media (max-width: 980px){
 /* FIX: prevent marquee from overflowing viewport */
 .projMedia{
   overflow: hidden;
   width: 100%;
   max-width: 100%;
+  margin: 0.5rem 0;
+}
+
+.projMarquee{
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.projTrack{
+  overflow: hidden;
+  width: max-content;
+  max-width: none;
+}
+
+.projImg{
+  height: 140px;
+  max-width: 220px;
 }
 
 .projStrip{
@@ -1192,3 +1260,14 @@ footer{
 
 }
 
+@media (max-width: 600px){
+  .projImg{
+    height: 120px;
+    max-width: 180px;
+  }
+  
+  .projTrack{
+    gap: 0.5rem;
+    padding: 0.4rem;
+  }
+}
