@@ -33,15 +33,14 @@ document.querySelectorAll(".acc-trigger").forEach((btn) => {
       b.setAttribute("aria-expanded", "false");
       const it = b.closest(".acc-item");
       const p = it.querySelector(".acc-panel");
+      if(p) p.style.display = "none";
       const ic = b.querySelector(".acc-icon");
-      if (p){ p.hidden = true; }
-      if (ic){ ic.textContent = "+"; }
+      if(ic) ic.textContent = "+";
     });
 
-    // Toggle current
-    if (!isOpen){
+    if(!isOpen){
       btn.setAttribute("aria-expanded", "true");
-      panel.hidden = false;
+      panel.style.display = "block";
       icon.textContent = "–";
     }
   });
@@ -58,11 +57,19 @@ function animateCounters(){
     function update(now){
       const progress = Math.min((now - startTime) / duration, 1);
       const value = Math.floor(progress * target);
-      counter.textContent = value.toString();
+      
+      // Formatting fix: If the target is 2008, don't add a comma
+      if (target === 2008) {
+          counter.textContent = value;
+      } else {
+          counter.textContent = value.toLocaleString();
+      }
+
       if(progress < 1){
         requestAnimationFrame(update);
       } else {
-        counter.textContent = target.toLocaleString();
+        // Final state check
+        counter.textContent = (target === 2008) ? target : target.toLocaleString();
       }
     }
     requestAnimationFrame(update);
@@ -88,18 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // Back to top button
 const backToTopBtn = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 300){
-    backToTopBtn.classList.add('show');
-  } else {
-    backToTopBtn.classList.remove('show');
-  }
-});
+if(backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 300){
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
