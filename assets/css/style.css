@@ -14,7 +14,7 @@
 }
 
 *{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
+html{ scroll-behavior:smooth;   overflow-x: hidden;}
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -1093,6 +1093,20 @@ footer{
 @media (max-width:700px){
   .logoWrap .marquee::before,
   .logoWrap .marquee::after{ width: 55px; }
+  /* Image covers (no overlay) */
+.projGraphic--img{
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Important for perceived quality */
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+
 }
 
 /* Project header hierarchy */
@@ -1145,4 +1159,36 @@ footer{
   transform: translateZ(0);
 }
 
+@media (max-width: 900px){
+  .projectGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px){
+/* FIX: prevent marquee from overflowing viewport */
+.projMedia{
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.projStrip{
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+/* Ensure images can't overflow their boxes */
+.projThumb{
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.projThumb img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+}
 
