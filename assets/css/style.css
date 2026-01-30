@@ -1178,3 +1178,20 @@ footer{
     height: auto;
   }
 }
+
+
+
+
+@media (max-width: 980px) {
+  /* This ensures the image container has a height even when empty */
+  .projCard--featured .projGraphic {
+    height: 300px; 
+    width: 100%;
+    display: block; /* Ensures it takes up the full width */
+  }
+
+  /* Optional: Also make regular project/service images taller for better visibility */
+  .serviceCard, .projCard {
+    grid-template-rows: 250px 1fr;
+  }
+}
