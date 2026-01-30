@@ -1,255 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MJT Consulting Engineers</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --mjt-red: #BE1E2D;
-            --mjt-dark: #1a1a1a;
-            --mjt-grey: #4a4a4a;
-            --mjt-light: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--mjt-dark);
-        }
-
-        /* Navbar Styling */
-        .navbar-brand img { height: 60px; }
-        .nav-link { font-weight: 700; text-transform: uppercase; color: var(--mjt-dark) !important; margin: 0 10px; }
-        .nav-link:hover { color: var(--mjt-red) !important; }
-
-        /* Hero Styling */
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-            url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            padding-top: 80px;
-        }
-
-        .btn-mjt {
-            background-color: var(--mjt-red);
-            color: white;
-            padding: 12px 30px;
-            font-weight: bold;
-            border: none;
-            border-radius: 0;
-            transition: 0.3s;
-        }
-
-        .btn-mjt:hover { background-color: var(--mjt-dark); color: white; }
-
-        /* Section Spacing */
-        section { padding: 100px 0; }
-        .section-title { font-weight: 800; text-transform: uppercase; margin-bottom: 50px; }
-        .section-title::after {
-            content: ''; display: block; width: 60px; height: 4px; background: var(--mjt-red); margin-top: 15px;
-        }
-
-        /* Card Styling */
-        .service-card {
-            border: none;
-            border-bottom: 5px solid var(--mjt-grey);
-            transition: 0.3s;
-            height: 100%;
-        }
-        .service-card:hover { border-bottom-color: var(--mjt-red); transform: translateY(-10px); }
-        .service-card img { height: 220px; object-fit: cover; }
-
-        /* Location Carousel Styling */
-        .location-section { background-color: var(--mjt-dark); color: white; }
-        .carousel-item { padding: 60px 0; text-align: center; }
-        .location-box h3 { color: var(--mjt-red); font-weight: 800; margin-bottom: 20px; }
-        .carousel-indicators [button] { background-color: var(--mjt-red); }
-
-        /* Footer */
-        footer { background-color: #111; color: #999; padding: 50px 0; border-top: 5px solid var(--mjt-red); }
-        footer strong { color: white; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MJT Consulting Engineers | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/MTJ_logo.png" alt="MJT Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#locations">Locations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+  <div class="topbar">
+    <div class="container-max">
+      <div class="wrap">
+        <div class="social" aria-label="Social media">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
-    </nav>
 
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1 class="display-3 fw-bolder mb-3">CONCEPTUALISE <br>MODEL IT • REALISE IT</h1>
-                    <p class="lead mb-5">Professional multi-disciplinary consulting engineers delivering excellence across South Africa since 2008.</p>
-                    <a href="#contact" class="btn btn-mjt btn-lg">Get Started</a>
-                </div>
-            </div>
+        <div class="topinfo">
+          <span class="pill"><i class="bi bi-envelope-fill"></i> mjt@mjtconsulting.co.za</span>
+          <span class="pill"><i class="bi bi-telephone-fill"></i> +27 15 265 7727</span>
+          <span class="pill"><i class="bi bi-clock-fill"></i>Mon-Fri: 8:00 - 17:00</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <section id="about">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h2 class="section-title">Who We Are</h2>
-                    <p class="mb-4">MJT CONSULTING ENGINEERS is steered by young engineering pioneers who set high standards of excellence. We strive to meet and exceed client requirements through teamwork, innovation, and flexible services.</p>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <h5 class="fw-bold text-danger">Level 1 BEE</h5>
-                            <p class="small">Top-tier contributor rating</p>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <h5 class="fw-bold text-danger">ISO 9001-2015</h5>
-                            <p class="small">Quality management compliant</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="whoweare.png" class="img-fluid rounded shadow" alt="Engineering Team">
-                </div>
-            </div>
+  <header>
+    <div class="container-max">
+      <div class="navbar-grid">
+        <div class="brand">
+          <a href="index.html" aria-label="MJT home">
+            <img src="assets/img/mtj_logo.png" alt="MJT Consulting logo">
+          </a>
         </div>
-    </section>
 
-    <section id="services" class="bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mx-auto">Our Engineering Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card service-card shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=500" class="card-img-top" alt="Civil">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold">Civil & Structural</h5>
-                            <p class="card-text text-muted">Buildings, bridges, water retaining structures, and towers design.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=500" class="card-img-top" alt="Electrical">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold">Electrical</h5>
-                            <p class="card-text text-muted">Substations, network reticulation, and industrial metering.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=500" class="card-img-top" alt="Roads">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold">Transportation</h5>
-                            <p class="card-text text-muted">Geometric road design, pavement rehabilitation, and traffic impact studies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <nav class="menu" aria-label="Primary navigation">
+          <a class="active" href="index.html">Home</a>
+          <a class="" href="about.html">About Us</a>
+          <a class="" href="services.html">Services</a>
+          <a class="" href="projects.html">Projects</a>
+          <a class="" href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="burger">
+          <button type="button" aria-label="Open menu" id="burgerBtn">
+            <i class="bi bi-list" style="font-size:1.35rem;"></i>
+          </button>
         </div>
-    </section>
+      </div>
 
-    <section id="locations" class="location-section">
-        <div class="container text-center">
-            <h2 class="section-title text-white mx-auto">Our National Footprint</h2>
-            <div id="locationCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="location-box">
-                            <h3>LIMPOPO (Head Office)</h3>
-                            <p>1. 2 Schalk Drive, Bendor Park, Polokwane</p>
-                            <p>2. No. 134 Park Street, Thohoyandou</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="location-box">
-                            <h3>GAUTENG</h3>
-                            <p>1. 30 Fairview Estate, Northriding</p>
-                            <p>2. 11 Janette St, Vereeniging</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="location-box">
-                            <h3>WESTERN CAPE</h3>
-                            <p>63 1st Avenue, Boston, Bellville, Cape Town</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="location-box">
-                            <h3>EASTERN CAPE</h3>
-                            <p>62 Bonza Bay Road, Beacon Bay, East London</p>
-                            <p>Mthatha | Port Elizabeth | Aliwal North</p>
-                        </div>
-                    </div>
-                    </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#locationCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#locationCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
+      <nav class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
+        <a class="active" href="index.html">Home</a>
+        <a class="" href="about.html">About Us</a>
+        <a class="" href="services.html">Services</a>
+        <a class="" href="projects.html">Projects</a>
+        <a class="" href="contact.html">Contact Us</a>
+        <a href="contact.html"><strong>Get Started</strong></a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="background-image: url('assets/img/hero–1b.jpg');">
+    <div class="container-max">
+      <div class="heroGrid">
+        <div>
+          <h1>CONCEPTUALISE • <br>MODEL IT • REALISE IT</h1>
+          <p>Professional multi-disciplinary consulting engineers delivering excellence across South Africa since 2008.</p>
+          <div style="display:flex;gap:.9rem;flex-wrap:wrap;">
+            <a class="btnx btnx-primary" href="contact.html"><i class="bi bi-lightning-charge-fill"></i> Get Started</a>
+            <a class="btnx btnx-ghost" href="projects.html"><i class="bi bi-kanban-fill"></i> View Projects</a>
+          </div>
         </div>
-    </section>
 
-    <section id="contact">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="bg-light p-5">
-                        <h2 class="mb-4 fw-bold">Send us a Message</h2>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 mb-3"><input type="text" class="form-control rounded-0 p-3" placeholder="Your Name"></div>
-                                <div class="col-md-6 mb-3"><input type="email" class="form-control rounded-0 p-3" placeholder="Email"></div>
-                            </div>
-                            <div class="mb-3"><input type="text" class="form-control rounded-0 p-3" placeholder="Subject"></div>
-                            <div class="mb-3"><textarea class="form-control rounded-0 p-3" rows="5" placeholder="How can we help?"></textarea></div>
-                            <button class="btn btn-mjt w-100 p-3">Submit Inquiry</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <h2 class="mb-4 fw-bold">Contact Details</h2>
-                    <p class="mb-2 text-danger fw-bold">Head Office Polokwane</p>
-                    <p>015 265 7727</p>
-                    <p class="mb-2 text-danger fw-bold">Email</p>
-                    <p>mjt@mjtconsulting.co.za</p>
-                    <p class="mt-4"><strong>Registration:</strong> 2012/169813/07</p>
-                    <p><strong>Professional Indemnity:</strong> R50 Million</p>
-                </div>
-            </div>
+
+      </div>
+    </div>
+  </section>
+
+
+<section>
+  <div class="container-max">
+    <div class="sectionTitle">
+      <div>
+        <h2>Who we are</h2>
+        <div class="accentLine"></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <p style="margin-top:0; max-width:72ch;">
+          <strong>MJT Consulting Engineers</strong> is a multi-disciplinary consulting company, operating professionally, with primary focus on Civil, structural, electrical and mechanical Engineering, Urban & Rural Development, Project Management and Construction Management and Supervision and Occupational Health and Safety. </p><p>It was formed in 2008 as a Close Corporation (CC). Since the government announced that all the CC companies have to be changed to (Pty) LTD, MJT Consulting Engineers changed in 2012. The company has 14 years in business. The company has a BEE rating of Level 1 and is a member of Water Institution of Southern Africa (WISA) and Consulting Engineering South Africa (CESA). MJT Consulting Engineers is ISO 9001-2015 Compliant.
+        </p>
+
+        <div class="badges">
+          <div class="badgeBox">
+            <div class="big">Level 1 B-BBEE</div>
+            <div class="small">Top-tier contributor rating</div>
+          </div>
+          <div class="badgeBox">
+            <div class="big">ISO 9001:2015</div>
+            <div class="small">Quality management compliant</div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <div class="container text-center">
-            <p><strong>MJT Consulting Engineers (Pty) Ltd</strong> &copy; 2026. All Rights Reserved.</p>
-            <p class="small text-uppercase">Conceptualise • Model it • Realise it</p>
+      <div class="cardBox">
+        <div style="aspect-ratio:4/3;background:
+          linear-gradient(135deg, rgba(190,30,45,.12), rgba(0,0,0,.03)),
+          url('assets/img/projects.jpeg');
+          background-size:cover;background-position:center;">
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<section style="background:var(--g100);">
+  <div class="container-max">
+    <div class="sectionTitle">
+      <div>
+        <h2>Our engineering services</h2>
+        <div class="accentLine"></div>
+      </div>
+      <a class="btnx btnx-primary" href="services.html"><i class="bi bi-arrow-right-circle-fill"></i> All Services</a>
+    </div>
+
+    <div class="cards">
+      <article class="serviceCard">
+        <div class="serviceThumb" style="background-image:url('assets/img/img–1c.avif');"></div>
+        <div class="serviceBody">
+          <h3>Civil & Structural</h3>
+          <p>Buildings, bridges, water retaining structures, and towers design.</p>
+        </div>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceThumb" style="background-image:url('assets/img/img–1d.avif');"></div>
+        <div class="serviceBody">
+          <h3>Electrical</h3>
+          <p>Substations, reticulation, and industrial metering solutions.</p>
+        </div>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceThumb" style="background-image:url('assets/img/highway.jpeg');"></div>
+        <div class="serviceBody">
+          <h3>Transportation</h3>
+          <p>Geometric road design, rehab, and traffic impact studies.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-projects">
+  <div class="container-max">
+    <div class="sectionTitle">
+      <div>
+        <h2>Featured Projects</h2>
+        <div class="accentLine"></div>
+   
+      </div>
+
+      <a class="btnx btnx-primary" href="projects.html">
+        <i class="bi bi-kanban-fill"></i> View All
+      </a>
+    </div>
+
+    <!-- FEATURED (full width) -->
+    <article class="projCard projCard--featured">
+     
+ <div class="projGraphic projGraphic--img"
+     style="background: url('assets/img/alexandra.jpg') center/cover no-repeat;">
+  <div class="projBadge">Featured</div>
+</div>
+
+
+      <div class="projBody">
+        <h3>Alexandra Hospice and Rehabilitation Centre</h3>
+
+        <div class="projMeta">
+          <span class="tag"><i class="bi bi-building"></i> Building</span>
+          <span class="tag"><i class="bi bi-person-badge"></i> Johannesburg Development Agency (JDA)</span>
+          <span class="tag"><i class="bi bi-cash-coin"></i> R10 000 000</span>
+          <span class="tag"><i class="bi bi-check2-circle"></i> Completed</span>
+        </div>
+
+        <p class="projDesc">
+Provision of Civil & Structural Engineering Services for Alexandra Hospice and Rehabilitation Centre
+        </p>
+
+        <div class="projActions">
+          <a class="btnx btnx-primary" href="projects.html">
+            <i class="bi bi-arrow-right-circle-fill"></i> View Portfolio
+          </a>
+          <a class="btnx btnx-ghost-dark" href="contact.html">
+            <i class="bi bi-envelope-paper-fill"></i> Enquire About Similar Work
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- SUPPORTING (grid) -->
+    <div class="projGrid">
+      <article class="projCard">
+        <div class="projGraphic projGraphic--img"
+     style="background: url('assets/img/durbanPort.jpg') center / cover no-repeat;">
+          <span class="projIcon"><i class="bi bi-building"></i></span>
+          <span class="projPattern"></span>
+        </div>
+        <div class="projBody">
+          <h3>Durban Port Structural Repairs</h3>
+          <div class="projMeta">
+            <span class="tag"><i class="bi bi-building"></i> Building</span>
+            <span class="tag"><i class="bi bi-person-badge"></i> Transnet SOC Ltd</span>
+            <span class="tag"><i class="bi bi-cash-coin"></i> R51 500 000</span>
+            <span class="tag"><i class="bi bi-check2-circle"></i> Completed</span>
+          </div>
+          <p class="projDesc">Professional Engineering & Management services for structural repairs.</p>
+        </div>
+      </article>
+
+      <article class="projCard">
+<div class="projGraphic projGraphic--img"
+     style="background: url('assets/img/prasa.jpeg') center / cover no-repeat;">
+          <span class="projIcon"><i class="bi bi-train-front"></i></span>
+          <span class="projPattern"></span>
+        </div>
+        <div class="projBody">
+          <h3>Refurbishmed PRASA Stations</h3>
+          <div class="projMeta">
+            <span class="tag"><i class="bi bi-building"></i> Building</span>
+            <span class="tag"><i class="bi bi-person-badge"></i> PRASA</span>
+            <span class="tag"><i class="bi bi-cash-coin"></i> R9m – R12m</span>
+            <span class="tag"><i class="bi bi-check2-circle"></i> Completed</span>
+          </div>
+          <p class="projDesc">Architectural, QS & Civil Engineering services for various stations.</p>
+        </div>
+      </article>
+
+      <article class="projCard">
+<div class="projGraphic projGraphic--img"
+     style="background: url('assets/img/jubilee.jpg') center / cover no-repeat;">
+          <span class="projIcon"><i class="bi bi-bus-front"></i></span>
+          <span class="projPattern"></span>
+        </div>
+        <div class="projBody">
+          <h3>Jubilee Taxi Rank</h3>
+          <div class="projMeta">
+            <span class="tag"><i class="bi bi-building"></i> Building</span>
+            <span class="tag"><i class="bi bi-person-badge"></i> KSD Municipality</span>
+            <span class="tag"><i class="bi bi-cash-coin"></i> R4 000 000</span>
+            <span class="tag"><i class="bi bi-check2-circle"></i> Completed</span>
+          </div>
+          <p class="projDesc">Rehabilitation of Jubilee Taxi Rank.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="counters">
+  <div class="container-max">
+    <div class="sectionTitle">
+      <div>
+        <h2>By the Numbers</h2>
+        <div class="accentLine"></div>
+      </div>
+    </div>
+
+  <div class="counterGrid">
+      <div class="counterBox">
+        <div class="counterNum" data-target="2008">0</div>
+        <div class="counterLabel">Established</div>
+      </div>
+
+      <div class="counterBox">
+        <div class="counterNum" data-target="9">0</div>
+        <div class="counterLabel">Provinces Covered</div>
+      </div>
+
+      <div class="counterBox">
+        <div class="counterNum" data-target="150">0</div>
+        <div class="counterLabel">Projects Delivered</div>
+      </div>
+
+      <div class="counterBox">
+        <div class="counterNum" data-target="50">R0</div>
+        <div class="counterLabel">Million Rands Professional Indemnity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="clients">
+  <div class="container-max">
+    <div class="sectionTitle">
+      <div>
+        <h2>Clients we’ve worked with</h2>
+        <div class="accentLine"></div>
+      </div>
+    </div>
+
+    <div class="logoWrap">
+      <div class="marquee">
+        <div class="marqueeInner">
+  <!-- Set A -->
+  <div class="logo"><img src="assets/img/logos/logo-bloemwater.png" alt="Bloemwater" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-tshwane.png" alt="City of Tshwane" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-mpumalanga.png" alt="Department of Public Works, Roads and Transport (Mpumalanga)" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-jda.png" alt="Johannesburg Development Agency" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-ksd.png" alt="King Sabata Dalindyebo Municipality" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-prasa.png" alt="PRASA" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-transnet.png" alt="Transnet SOC Ltd" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-vhembe.png" alt="Vhembe District Municipality" loading="lazy"></div>
+
+  <!-- Set B (duplicate for seamless scrolling) -->
+  <div class="logo"><img src="assets/img/logos/logo-bloemwater.png" alt="Bloemwater" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-tshwane.png" alt="City of Tshwane" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-mpumalanga.png" alt="Department of Public Works, Roads and Transport (Mpumalanga)" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-jda.png" alt="Johannesburg Development Agency" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-ksd.png" alt="King Sabata Dalindyebo Municipality" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-prasa.png" alt="PRASA" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-transnet.png" alt="Transnet SOC Ltd" loading="lazy"></div>
+  <div class="logo"><img src="assets/img/logos/logo-vhembe.png" alt="Vhembe District Municipality" loading="lazy"></div>
+</div>      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <footer>
+    <div class="container-max">
+      <div class="footerGrid">
+        <div>
+          <p class="footTitle">MJT Consulting Engineers</p>
+          <p style="margin:0; color:rgba(255,255,255,.75); max-width:60ch;">
+            Professional multi-disciplinary consulting engineers delivering excellence across South Africa.
+          </p>
+          <div style="height:1rem"></div>
+          <a class="btnx btnx-primary" href="mailto:mjt@mjtconsulting.co.za">
+            <i class="bi bi-envelope-paper-fill"></i> Email Us
+          </a>
+        </div>
+
+        <div class="footLinks">
+          <p class="footTitle">Quick links</p>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="footBox">
+          <p class="footTitle">Contact info</p>
+          <div class="footRow"><i class="bi bi-geo-alt-fill"></i> Polokwane, Limpopo (Head Office)</div>
+          <div class="footRow"><i class="bi bi-telephone-fill"></i> +27 15 265 7727</div>
+          <div class="footRow"><i class="bi bi-envelope-fill"></i> mjt@mjtconsulting.co.za</div>
+          <div class="footRow" style="gap:.75rem; padding-top:.6rem;">
+            <a class="pill" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="pill" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a class="pill" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <div>© <span id="year"></span> MJT Consulting Engineers. All Rights Reserved.</div>
+        <div>Tassili Studios</div>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up-short"></i>
+</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+
 </body>
 </html>
